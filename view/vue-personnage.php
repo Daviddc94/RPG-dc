@@ -6,8 +6,8 @@
     include ("../model/Personnage.class.php");
 
     // Instancier avec une armure et un nombre de potions = 3.
-    $perso = new Personnage("David", "400", "12");
-    $perso2 = new Personnage("Leonidas", "380", "15");
+    $perso = new Personnage("David", "400", "12", "5", "3");
+    $perso2 = new Personnage("Leonidas", "380", "15", "4", "3");
 
 
 
