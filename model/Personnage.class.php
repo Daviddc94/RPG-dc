@@ -16,10 +16,10 @@
         private $nombreDePotions;
 
 
-    // GETTERS ET SETTERS POUR armure
+    // GETTERS ET SETTERS POUR $armure
     //...
 
-    // GETTERS ET SETTERS POUR $healthPotionTotal
+    // GETTERS ET SETTERS POUR $nombreDePotions
     //...
 
 
