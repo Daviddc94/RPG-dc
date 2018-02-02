@@ -9,18 +9,32 @@
         private $vie;
         private $attaque;
 
-    
+        // Nouvel attribut, il faut soustraire l'armure avant de prendre des dégats
+        private $armure;
+
+        // Nouvel attribut, compte le nombre de potion de vie que possède le joueur
+        private $nombreDePotions;
+
+
+    // GETTERS ET SETTERS POUR armure
+    //...
+
+    // GETTERS ET SETTERS POUR $healthPotionTotal
+    //...
+
+
+    // Modifier le constructeur pour rajouter armure et nombre de potions.
     public function __construct($pseudo, $vie, $attaque)
     {
         $this->pseudo = $pseudo;
         $this->vie = $vie;
         $this->attaque = $attaque;
     }
-    
+
     public function setPseudo($pseudo){
         $this->pseudo = $pseudo;
     }
-    
+
     public function setVie($vie){
         $this->vie = $vie;
     }
@@ -28,7 +42,7 @@
     public function setAttaque($attaque){
         $this->attaque = $attaque;
     }
-    
+
     public function getPseudo(){
         return $this->pseudo;
     }
@@ -38,9 +52,12 @@
     }
 
     public function getAttaque(){
-        return $this->attaque; 
+        return $this->attaque;
     }
 
+
+
+    // Mettre à jour la fonction en prenant compte de l'armure, qui réduit chaque attaque de sa valeur
     public function seBattre($perso1, $perso2){
        echo $life1 = $perso1->getVie();
        echo "<br>";
@@ -48,7 +65,7 @@
        echo "<br>";
        echo "<br>";
         while (($perso1->getVie() > 0) && ($perso2->getVie() > 0))
-        {         
+        {
             echo $perso1->getVie();
             echo "<br>";
             echo $perso2->getVie();
@@ -80,7 +97,7 @@
             echo ' à gagné';
         }
         //$perso1 ->setVie("10");
-        
+
         //echo $perso1->getVie();
 
         //        while ($vie1 > '0' || $vie2 > '0')
@@ -96,6 +113,15 @@
         else
             echo 'le joueur 2 à gagné';*/
     }
+
+
+    // Nouvelle fonction : potion de vie, permet de regagner de la vie
+    public function healthPotion()
+    {
+        // ...
+    }
+
+
 
     /*public function name(){
         echo $pseudo;
